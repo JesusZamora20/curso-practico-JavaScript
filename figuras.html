@@ -32,6 +32,67 @@
             
         </form>
     </section>
+    
+    <section>
+        <h2>Calcula el area y perimetro de un Triangulo</h2>
+        <form>
+            <label for="InputTrianguloLado1">
+                Escribe cuanto mide el lado 1 del triangulo
+            </label> 
+            <input id="InputTrianguloLado1" type = "number" />
+
+            <br>
+
+            <label for="InputTrianguloLado2">
+                Escribe cuanto mide el lado 2 del triangulo
+            </label> 
+            <input id="InputTrianguloLado2" type = "number" />
+
+            <br>
+
+            <label for="InputTrianguloBase">
+                Escribe cuanto mide la base del triangulo
+            </label>
+            <input id="InputTrianguloBase" type = "number" />
+
+            <br>
+
+            <label for="InputTrianguloAltura">
+                Escribe cuanto mide la altura del triangulo
+            </label> 
+            <input id="InputTrianguloAltura" type = "number" />
+
+            <br>
+
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular el perimetro
+            </button>
+
+            <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular el area
+            </button>
+            
+        </form>
+    </section>
+
+    <section>
+        <h2>Calcula el area y perimetro de un circulo</h2>
+        <form>
+            <label for="InputRadioCirculo">
+                Escribe cuanto mide el radio
+            </label> 
+
+            <input id="InputRadioCirculo" type = "number" />
+            <button type="button" onclick="calcularPerimetroCirculo()">
+                Calcular el perimetro
+            </button>
+
+            <button type="button" onclick="calcularAreaCirculo()">
+                Calcular el area
+            </button>
+            
+        </form>
+    </section>
 
     <script src = "./figuras.js"></script>
 </body>
