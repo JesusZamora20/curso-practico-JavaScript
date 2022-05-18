@@ -78,7 +78,7 @@ function calcularAreaTriangulo(){
     const base = inputBase.value;
     const altura = inputAltura.value;
     const areaTriangulo = AreaTriangulo(base, altura);
-    alert(areaTriangulo);
+    alert(areaTriangulo)
 }
 
 function calcularPerimetroCirculo(){
