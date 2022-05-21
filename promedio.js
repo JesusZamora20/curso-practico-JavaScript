@@ -13,9 +13,7 @@ function CalcularPromedio(lista){
     }*/
 
     const sumaLista = lista.reduce(
-        function(valorAcumulado = 0,nuevoElemento){
-            return valorAcumulado + nuevoElemento;
-        }
+        (valorAcumulado = 0,nuevoElemento)=> valorAcumulado + nuevoElemento
     );
 
     const result = sumaLista/lista.length;
