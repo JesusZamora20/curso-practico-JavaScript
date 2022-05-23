@@ -8,6 +8,32 @@
 </head>
 <body>
     <h1>Promedio</h1>
+
+    <section>
+        <h2> Aqui ingresas tus numeros para calcular promedio</h2>
+        <form>
+            <label for="numberToAdd">Ingresa tus numeros</label>
+            <input id="numberToAdd" type="number">
+
+            <br>
+            <br>
+
+            <button type="button" onclick="AddNumber()">
+                add number
+            </button>
+
+            <button type="button" onclick="CalcularPromedio()">
+                calculate average
+            </button>
+
+            <br>
+            <br>
+            
+            <p id="list"></p>
+
+            <p id="promedio"></p>
+        </form>
+    </section>
     <script src="./promedio.js"></script>
 </body>
 </html>
