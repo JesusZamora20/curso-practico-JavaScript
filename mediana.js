@@ -1,6 +1,7 @@
-const listaMediana = [1,3,4,5];
+const listaMediana = [1,3,5,6,1,3,4,5,5,6,7,7,7,3,1,21,2,2];
 
 const mitadListaMediana = parseInt(listaMediana.length /2);
+
 
 function EsPar(numero){
     if(numero % 2 === 0){
@@ -13,9 +14,15 @@ function EsPar(numero){
 
 let mediana;
 
-if(EsPar(listaMediana.length)){
-    const elemento1 = listaMediana[mitadListaMediana - 1];
-    const elemento2 = listaMediana[mitadListaMediana];
+const listaMedianaOrdenada = listaMediana.sort(
+    function (elementoAmediana, elementoBmediana){
+        return elementoAmediana - elementoBmediana;
+    }
+);
+
+if(EsPar(listaMedianaOrdenada.length)){
+    const elemento1 = listaMedianaOrdenada[mitadListaMediana - 1];
+    const elemento2 = listaMedianaOrdenada[mitadListaMediana];
     
     const promedioElem1YElem2 = CalcularPromedioDeMediana([
         elemento1, elemento2
@@ -23,7 +30,7 @@ if(EsPar(listaMediana.length)){
     mediana = promedioElem1YElem2;
 
 }else{
-    mediana = listaMediana[mitadListaMediana];
+    mediana = listaMedianaOrdenada[mitadListaMediana];
  
 }
 
@@ -40,5 +47,7 @@ function CalcularPromedioDeMediana(lista){
 
 }
 
+
+
 //el reto de este es integrarlo con html como siempre, 
-// además debemos ordenar los datos de mayor a menor con .sort
+// además debemos ordenar los datos de mayor a menor con .sort - hecho
