@@ -86,8 +86,45 @@
         </form>
     </section>
 
+    <h1> Promedio Ponderado </h1>
+
+    <section>
+        <form>
+            <h2> Ingresa las notas y el porcentaje de peso de cada nota</h2>
+            <label for="nota">Ingresa la nota (0 - 10)</label>
+            <input id="nota" type="number">
+
+            <br>
+            <br>
+
+            <label for="peso">Ingresa el peso de la nota (0% - 100%)</label>
+            <input id="peso" type="number">
+            
+            
+            <br>
+            <br>
+
+            <button type="button" onclick="AnadirPesoYNota()">
+                add
+            </button>
+
+            <button type="button" onclick="">
+                calcular Promedio Ponderado
+            </button>
+
+            <br>
+            <br>
+
+            <p id="listaNota"></p>
+            <br>
+            <p id="listaPeso"></p>
+
+        </form>
+    </section>
+
     <script src="./mediana.js"></script>
     <script src="./promedio.js"></script>
     <script src="./moda.js"></script>
+    <script src="./PromedioPonderado.js"></script>
 </body>
 </html>
