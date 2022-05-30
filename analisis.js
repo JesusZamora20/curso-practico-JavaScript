@@ -45,6 +45,20 @@ const salariosColOrdenados = salariosCol.sort(
     }
 );
 
-
-
 const medianaGeneralCol = MedianaSalarios(salariosColOrdenados);
+
+
+//mediana top 10%
+const spliceStart = salariosColOrdenados.length * 0.9;
+const splicecount = salariosColOrdenados.length - spliceStart;
+
+const salariosColTop10 = salariosColOrdenados.splice(spliceStart, splicecount);
+const  medianaTopCol10 = MedianaSalarios(salariosColTop10);
+
+console.log({medianaGeneralCol, medianaTopCol10});
+
+//el reto es:
+
+/* expandir el analisis salarial como quiera*/
+
+
