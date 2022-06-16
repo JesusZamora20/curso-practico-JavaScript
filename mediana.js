@@ -1,52 +1,44 @@
-const listaMediana = [1,3,5,6,1,3,4,5,5,6,7,7,7,3,1,21,2,2];
+let listaMediana = [];
 
-const mitadListaMediana = parseInt(listaMediana.length /2);
+function AddNumberMediana(){
+    let numerosmediana = document.getElementById("numerosMediana");
+    let newNumber = Number(numerosmediana.value);
+
+    listaMediana.push(newNumber);
 
 
-function EsPar(numero){
-    if(numero % 2 === 0){
-        return true;
-    }else{
-        return false;
-    }
+    const showListMediana = document.getElementById("listMediana");
+    showListMediana.innerText = listaMediana;
 
+    document.getElementById('numerosMediana').value= null;
 }
 
-let mediana;
-
-const listaMedianaOrdenada = listaMediana.sort(
-    function (elementoAmediana, elementoBmediana){
-        return elementoAmediana - elementoBmediana;
-    }
-);
-
-if(EsPar(listaMedianaOrdenada.length)){
-    const elemento1 = listaMedianaOrdenada[mitadListaMediana - 1];
-    const elemento2 = listaMedianaOrdenada[mitadListaMediana];
+function CalcularMediana(){
     
-    const promedioElem1YElem2 = CalcularPromedioDeMediana([
-        elemento1, elemento2
-    ]);
-    mediana = promedioElem1YElem2;
-
-}else{
-    mediana = listaMedianaOrdenada[mitadListaMediana];
- 
-}
-
-function CalcularPromedioDeMediana(lista){
-
-    const sumaListaMediana = lista.reduce(
-        function (valorAcumulado = 0, nuevoElemento) {
-          return valorAcumulado + nuevoElemento;
+    //primero se ordena la lista
+    let listaMedianaOrdenada = listaMediana.sort(
+        function (elementoAmediana, elementoBmediana){
+            return elementoAmediana - elementoBmediana;
         }
-      );
-        medianaLista = Number(sumaListaMediana/lista.length);  
+    );
 
-        return medianaLista;
+    //se determina la mitad de la lista
+    let mitadListaMediana = parseInt(listaMedianaOrdenada.length /2);
+    
+    if(listaMedianaOrdenada.length % 2 === 0){
+        let elemento1 = listaMedianaOrdenada[mitadListaMediana - 1];
+        let elemento2 = listaMedianaOrdenada[mitadListaMediana];
+        
+        let promedioElem1YElem2 = Number((elemento1+elemento2)/2);
+        mediana = promedioElem1YElem2;
+    
+    }else{
+        mediana = listaMedianaOrdenada[mitadListaMediana];
+    }
 
+    const resultMediana = document.getElementById("mediana");
+    resultMediana.innerText = `La Lista ordenada es ${listaMedianaOrdenada} y la mediana es ${mediana}`;
 }
-
 
 
 //el reto de este es integrarlo con html como siempre, 

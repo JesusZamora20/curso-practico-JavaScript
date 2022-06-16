@@ -27,5 +27,12 @@ function CalcularPromedio(){
     result.innerText = `el promedio es ${promedioLista}`;
 }
 
+function ClearText(){
+ 
+}
+
+//hacer funcionar la funcion clear, que borra el texto y el contenido
+//de las variables. 
+
 
 
