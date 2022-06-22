@@ -72,22 +72,28 @@
     <section>
         <form>
             <h2> Ingresa los numeros para calcular la Moda</h2>
-            <label for="numerosModa">Ingresa tus numeros</label>
-            <input id="numerosModa" type="number">
+            <label for="numeroModa">Ingresa tus numeros</label>
+            <input id="numeroModa" type="number">
 
             <br>
             <br>
 
-            <button type="button" onclick="">
+            <button type="button" onclick="AddNumberModa()">
                 add number
             </button>
 
-            <button type="button" onclick="">
+            <button type="button" onclick="CalcularModa()">
                 calcular moda
             </button>
 
             <br>
             <br>
+
+            <p id="listaModa"></p>
+
+            <br>
+
+            <p id="Moda"></p>
         </form>
     </section>
 

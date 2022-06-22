@@ -1,8 +1,23 @@
-const listaModa = [1,2,3,1,2,3,4,2,2,2,1];
+let listaModa = [];
 
 const listaModaCount = {};
 
-//creamos una funcion que registra cuantas veces estan los 
+function AddNumberModa(){
+    let numberToAddModa = document.getElementById("numeroModa");
+    let newNumberModa = Number(numberToAddModa.value);
+
+    listaModa.push(newNumberModa);
+
+    const showListaModa = document.getElementById("listaModa");
+    showListaModa.innerText = listaModa;
+
+    document.getElementById('numeroModa').value= null;
+
+}
+
+function CalcularModa(){
+
+    //creamos una funcion que registra cuantas veces estan los 
 //elementos en el array
 listaModa.map(
     function (elemento){
@@ -21,6 +36,13 @@ const listaModaArray = Object.entries(listaModaCount).sort(
     }
 );
 
-const moda = listaModaArray[listaModaArray.length-1];
+const moda = listaModaArray[listaModaArray.length-1][0];
+const repeticionesmoda = listaModaArray[listaModaArray.length-1][1];
+
+const resultadoModa = document.getElementById("Moda");
+resultadoModa.innerText = `La moda es ${moda} y aparece ${repeticionesmoda} veces`;
+
+}
+
 
 //el reto es integrarlo a JS
